@@ -1,0 +1,63 @@
+:root{
+    --fuente:"Noticia Text", serif
+}
+
+.body {
+    height: 100vh;
+    margin: 0px;
+    
+}
+input{
+    border-radius: 20px;
+    border: none;
+    height: 20px;
+}
+button {
+    height: 30px;
+    border-radius: 35px;
+    border: none;
+}
+.main{
+    background-color: #84A98C;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-family: var(--fuente);
+}
+.main-etiqueta {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 57%;
+    height:500px;
+    margin: auto;
+    border: 4px solid #CAD2C5;
+    border-radius: 30px;
+    background-color: #2F3E46;
+}
+.main_form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 60%;
+    height: 60%;
+   
+}
+.main_header{
+    margin: auto;
+    width: 50%;
+    height: 50px;
+    font-size: 25px;
+    
+}
+.main_form-elements{
+    width: 50%;
+    font-size: 18px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
