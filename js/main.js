@@ -27,7 +27,7 @@ class Mimain extends HTMLElement {
         this.innerHTML = `
         <main class="main-etiqueta">
             <section class="main_header">
-                <h1>Bienvenido a Acme School</h1>
+                <h1>Bienvenido tu Blog de Notas Acme</h1>
             </section>
             <section class="main_form">
                 <form action="" id="frmGetIn" class="main_form-elements">
@@ -119,6 +119,25 @@ class Mimain extends HTMLElement {
                         }   
                     } else {
                         console.log('Usuario no registrado');
+                        main.innerHTML=`
+                                <style>
+                                .efecto{
+                                    opacity:0;
+                                    animation: animation 4s ease 0.1s forwards ;
+                                    width:50%;
+                                    margin:auto;
+                                }
+                                @keyframes animation {
+                                    0%{opacity: 0;}
+                                    50%{opacity: 1;}
+                                    75%{opacity: 0;}
+                                    100%{opacity: 1;}
+                                }
+                                </style>
+                                <h1 class="efecto">Usuario No Registrado</h1>`
+                            setTimeout(() => {
+                                window.location.href= "index.html"
+                            }, 2000);
                     }
                 }; 
             })

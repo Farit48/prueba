@@ -2,18 +2,20 @@ class Registro extends HTMLElement {
     constructor(){
         super();
         this.innerHTML = `
-        <main class="main-etiqueta">
+        <main class="main-etiqueta-form">
             <section class="main_header">
                 <h2>Registrar</h2>
             </section>
             <section class="main_form">
                 <form action="" id="frmRegist" class="main_form-elements">
                     <p>Correo nuevo</p>
-                    <input type="text" name="Usuario" id="emailReg">
+                    <input type="email" name="Usuario" id="emailReg">
                     <p>Ingrese contraseña nueva</p>
                     <input type="password" name="password" id="passwordReg">
                     <p>id nuevo</p>
-                    <input type="text" name="id" id="id"><br>
+                    <input type="text" name="id" id="id">
+                    <span>Profesor</span><input type="radio" name="cargo" id="cargo" value="Profe">
+                    <span>Admin</span> <input type="radio" name="cargo" id="cargo" value="Admin"><br>
                     <button type="button" id="btnSave">guardar</button>
                 </form>
             </section>
@@ -30,7 +32,8 @@ class Registro extends HTMLElement {
                 const nuevoUser = {
                 id:document.getElementById('id').value,
                 correo:document.getElementById('emailReg').value,
-                contraseña:document.getElementById('passwordReg').value
+                contraseña:document.getElementById('passwordReg').value,
+                cargo:document.querySelector('input[name="cargo"]:checked').value
                 }
             
                 const transaction = db.transaction(["Usuarios"], "readwrite")
